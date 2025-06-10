@@ -1,0 +1,50 @@
+:root {
+  font-family: 'Flexo Demi', sans-serif;
+  line-height: 1.5;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'Flexo Demi';
+  src: url('/fonts/Flexo-Demi.woff2') format('woff2'),
+       url('/fonts/Flexo-Demi.woff') format('woff');
+  font-style: normal;
+}
+
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+p {
+  color:black;
+}
+
+.card {
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
