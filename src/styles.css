@@ -1,3 +1,4 @@
+/*Default Element Styles*/
 :root {
   font-family: 'Flexo Demi', sans-serif;
   line-height: 1.5;
@@ -7,6 +8,7 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 @font-face {
@@ -16,35 +18,42 @@
   font-style: normal;
 }
 
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 p {
   color:black;
 }
 
-.card {
-  border-radius: 10px;
-  border-color: black;
-  border-style: solid;
+.header, .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background-color: #f00000;
+  color: #f0f0f0;
+
+  height: 10vh;
+
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
+.header {
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-color: black;
+}
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.footer {
+  border-top-style: solid;
+  border-top-width: 10px;
+  border-color: black;
+}
+
+.bodyContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

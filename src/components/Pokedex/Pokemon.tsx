@@ -1,16 +1,31 @@
-import {Card} from 'react-bootstrap';
-import '../../style.css'
+import './pokedex.css'
+
+export interface Stat {
+    hp: number;
+    attack: number;
+    defense: number;
+    special_attack: number;
+    special_defense: number;
+    speed: number;
+}
+
+export interface Move {
+
+}
+
 export interface PokemonProps {
-  sprite: string;
-  audio: string;
-  description: string;
+    sprite: string;
+    audio: string;
+    description: string;
+    number: number;
+    stat: Stat;
 }
 
 
 function Sprite({ sprite }: Pick<PokemonProps, 'sprite'>) {
     return (
         <div>
-            <img src={sprite}/>
+            <img className='sprite' src={sprite}/>
         </div>
     )
 }
@@ -33,12 +48,13 @@ function Description({description}: Pick<PokemonProps, 'description'>) {
     )
 }
 
-
 function Pokemon({sprite, audio, description}: PokemonProps) {
     return (
-        <div className='card'>
-            <Sprite sprite={sprite}/>
-            <Audio audio={audio}/>
+        <div className='pokemon'>
+            <div>
+                <Sprite sprite={sprite}/>
+                <Audio audio={audio}/>
+            </div>
             <Description description={description}/>
         </div>
     )

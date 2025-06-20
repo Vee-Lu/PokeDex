@@ -1,15 +1,18 @@
-import { useState } from 'react';
-import '../../style.css'
+import type { ChangeEvent } from 'react';
+import './pokedex.css'
 
-function SearchBar() {
-    const [pokemon, setPokemon] = useState('');
-    const editPokemon = (e: React.ChangeEvent<HTMLInputElement>) => setPokemon((e.target.value));
+interface SearchBarProps {
+  pokemonName: string;
+  editPokemon: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
+function SearchBar({pokemonName, editPokemon}: SearchBarProps ) {
 
     return (
         <div>
             <div className="searchBar">
-                <input placeholder="Enter a Pokemon" type="text" onChange={editPokemon}/>
-                <img className="searchIcon"/>
+                <input placeholder="Enter a Pokemon" value={pokemonName} type="text" onChange={editPokemon}/>
+                <img className="searchIcon" src='../assets/search_icon.webp'/>
             </div>
         </div>
         
