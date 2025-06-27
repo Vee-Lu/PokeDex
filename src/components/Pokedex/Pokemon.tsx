@@ -1,4 +1,6 @@
 import './pokedex.css'
+import Header from '../Header'
+import Footer from '../Footer'
 
 export interface Stat {
     hp: number;
@@ -42,8 +44,13 @@ function Audio({audio}: Pick<PokemonProps, 'audio'>) {
 
 function Description({description}: Pick<PokemonProps, 'description'>) {
     return (
-        <div className='card'>
-            {description}
+        <div>
+            <div className='card'>
+                {description}
+            </div>
+            <table>
+                <th>Data</th>
+            </table>
         </div>
     )
 }

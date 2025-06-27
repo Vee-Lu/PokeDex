@@ -6,10 +6,10 @@ function Banner() {
     return(
         <div className='header'>
             <div>
-                TrainerDex
+                <a href="TrainerDex">TrainerDex</a>
             </div>
             <div>
-                Types
+                <a href="Types">Types</a>
             </div>
         </div>
     )

@@ -1,11 +1,4 @@
 /*Class Styles*/
-.appContainer {
-  display: flex;
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-}
-
 input {
   width: 15vw;
   height: 3vh;
@@ -15,8 +8,23 @@ input[type='text'] {
   font-family: 'Flexo Demi';
 }
 
+.pokedexContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemonContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
 .searchBar {
   display: flex;
+  align-items: center;
 }
 
 .searchIcon {
@@ -26,4 +34,14 @@ input[type='text'] {
   min-width: 20px;
   min-height: 20px;
   padding-left: 10px;
+}
+
+.searchIcon:hover {
+  cursor: pointer;
+}
+
+.sprite {
+  image-rendering: pixelated;
+  height: 30vh;
+  width: 15vw;
 }

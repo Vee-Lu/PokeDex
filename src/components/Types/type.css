@@ -1,0 +1,157 @@
+.typesContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.types {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 5px;
+    padding-top: 20px;
+
+    background-color: white;
+
+    border: solid;
+    border-width: 5px;
+    border-radius: 5px;
+
+    height: 15vh;
+    width: 10vw;
+}
+
+.typeImage {
+    height: 10vh;
+    width:5vw;
+}
+
+.typeFooter {
+    height: 5vh;
+    width: 10vw;   
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+/*Type Colors*/
+.Fire:hover {
+    background-color: #EE8130;
+    border-color :#EE8130 ;
+    cursor: pointer;
+}
+
+.Water:hover {
+    background-color: #5684e7;
+    border-color: #5684e7;
+    cursor: pointer;
+}
+
+.Grass:hover {
+    background-color: #7AC74C;
+    border-color: #7AC74C;
+    cursor: pointer;
+}
+
+.Normal:hover {
+    background-color: #8e8e86;
+    border-color: #8e8e86;
+    cursor: pointer;
+}
+
+.Flying:hover {
+    background-color: #a0bbff;
+    border-color: #a0bbff;
+    cursor: pointer;
+}
+
+.Fighting:hover {
+    background-color: #C22E28;
+    border-color: #C22E28;
+    cursor: pointer;
+}
+
+.Ground:hover {
+    background-color: 	#886018;
+    border-color: 	#886018;
+    cursor: pointer;
+}
+
+.Bug:hover {
+    background-color: #A6B91A;
+    border-color: #A6B91A;
+    cursor: pointer;
+}
+
+.Electric:hover {
+    background-color: #dcb000;
+    border-color: #dcb000;
+    cursor: pointer;
+}
+
+.Ice:hover {
+    background-color: #96D9D6;
+    border-color: #96D9D6;
+    cursor: pointer;
+}
+
+.Ghost:hover {
+    background-color: #735797;
+    border-color: #735797;
+    cursor: pointer;
+}
+
+.Psychic:hover {
+    background-color: #F95587;
+    border-color: #F95587;
+    cursor: pointer;
+}
+
+.Dragon:hover {
+    background-color: #1f4da8;
+    border-color: #1f4da8;
+    cursor: pointer;
+}
+
+.Fairy:hover {
+    background-color: #D685AD;
+    border-color: #D685AD;
+    cursor: pointer;
+}
+
+.Dark:hover {
+    background-color: #313131;
+    border-color: #313131;
+    cursor: pointer;
+}
+
+.Rock:hover {
+    background-color: #B6A136;
+    border-color: #B6A136;
+    cursor: pointer;
+}
+
+.Steel:hover {
+    background-color: #6b81b3;
+    border-color: #6b81b3;
+    cursor: pointer;
+}   
+
+.Poison:hover {
+    background-color: #A33EA1;
+    border-color: #A33EA1;
+    cursor: pointer;
+}

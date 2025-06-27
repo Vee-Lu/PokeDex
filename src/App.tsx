@@ -13,7 +13,7 @@ function App() {
             <div className="appContainer">
                 <Pokedex/>
             </div>
-            <Footer/>
+            <Footer>Font thanks to Ben Blom</Footer>
         </div>
     )
 
