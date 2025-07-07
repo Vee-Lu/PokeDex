@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
-import SearchBar from './Searchbar'
 import Pokemon from './Pokemon'; 
+import type { PokemonProps, Stat } from './Pokemon';
+
+import SearchBar from './Searchbar'
 import Header from '../Header'
 import Footer from '../Footer'
 
-import type { PokemonProps, Stat } from './Pokemon';
+import {loadPokemon} from '../../utils/loadPokemon'
 import './pokedex.css'
 
 //Default Stats
@@ -38,9 +40,8 @@ function Pokedex() {
         setName(e.target.value);
     }
 
-
-
     /*Function that loads pokemon data by fetching JSON data for specified Pokemon*/
+    /*
     function loadPokemon(pokemon: string | number) {
         Promise.all([
             fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`),
@@ -74,10 +75,12 @@ function Pokedex() {
         });
         })
     }
+    */
+    
 
 
     useEffect(() => {
-        loadPokemon(randPokemon);
+        loadPokemon(randPokemon).then(setPokemon);
     }, [pokemonName]);
 
 
@@ -86,13 +89,14 @@ function Pokedex() {
             <Header/>
                 <div className="pokemonContainer">
                     <SearchBar pokemonName={pokemonName} editPokemon={editPokemon}/>
-                    {Object.values(pokemon).every(value => value) ?(
-                        <>
-                        <Pokemon {...pokemon}/>
-                        </>
-                    ) : (
-                        <p>Loading...</p>
-                    )}
+                    {Object.values(pokemon).every(value => value) ?
+                    (<> 
+                        <Pokemon {...pokemon}/> 
+                    </>) 
+                    : 
+                    (<p>
+                        Loading...
+                    </p>)}
                 </div>
             <Footer>Font thanks to Ben Blom</Footer>
         </div>

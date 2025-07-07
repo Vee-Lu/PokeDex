@@ -45,14 +45,35 @@ function Audio({audio}: Pick<PokemonProps, 'audio'>) {
 function Description({description}: Pick<PokemonProps, 'description'>) {
     return (
         <div>
-            <div className='card'>
-                {description}
-            </div>
             <table>
-                <th>Data</th>
+                <tr>
+                    <th>National Pokedex Number</th>
+                </tr>
+        
+                <tr>
+                    <th>Height</th>
+                </tr>
+
+                <tr>
+                    <th>Weight</th>
+                </tr>
+
+                <tr>
+                    <th>Species</th>
+                </tr>
+
+                <tr>
+                    <th>Description</th>
+                    <td>{description}</td>
+                </tr>
+
             </table>
         </div>
     )
+}
+
+function Abilities() {
+
 }
 
 function Pokemon({sprite, audio, description}: PokemonProps) {

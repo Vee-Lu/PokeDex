@@ -1,17 +1,36 @@
-import React, { useState } from 'react'
-import './styles.css'
-import Pokedex from './components/Pokedex/Pokedex'
+import  { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
+import Pokemon from './components/Pokedex/Pokemon';
+import type { PokemonProps, Stat } from './components/Pokedex/Pokemon';
+import { defaultPokemon } from './components/Pokedex/Pokedex'
+
+import './styles.css'
+import { loadPokemon } from './utils/loadPokemon';
+
 function App() {
-    const headerText = ["Trainer Dex", "Types", "Users"];
-    const footerText = [<p>Font thanks to <a href="https://www.onlinewebfonts.com/download/073a3b73a63a87e100f6bb8f003fc0d3">Ben Blom</a></p>];
+    const [dailyPokemon, setDailyPokemon] = useState<PokemonProps>(defaultPokemon);
+    const [randPokemon, setRandPokemon] = useState(() =>
+        Math.floor(Math.random() * 1025) + 1
+    );
+
+    useEffect(() => {
+        loadPokemon(randPokemon).then(setDailyPokemon);
+    })
     return (
         <div className='bodyContainer'>
             <Header/>
             <div className="appContainer">
-                <Pokedex/>
+                <h1>Pokemon of the Day</h1>
+                {Object.values(dailyPokemon).every(value => value) ?
+                    (<> 
+                        <Pokemon {...dailyPokemon}/> 
+                    </>) 
+                    : 
+                    (<p>
+                        Loading...
+                </p>)}
             </div>
             <Footer>Font thanks to Ben Blom</Footer>
         </div>
