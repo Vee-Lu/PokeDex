@@ -21,10 +21,15 @@ export const defaultStat: Stat = {
 
 //Default Pokemon
 export const defaultPokemon: PokemonProps = {
+    number: 0,
     sprite: '',
     audio: '',
+
+    species: '',
+    types: [],
+    height: 0,
+    weight: 0,
     description: '',
-    number: 0,
     stat: defaultStat
 };
 

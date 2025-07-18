@@ -21,7 +21,7 @@ function App() {
     return (
         <div className='bodyContainer'>
             <Header/>
-            <div className="appContainer">
+            <div className='appContainer'>
                 <h1>Pokemon of the Day</h1>
                 {Object.values(dailyPokemon).every(value => value) ?
                     (<> 
